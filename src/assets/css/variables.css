@@ -1,0 +1,43 @@
+:root {
+  /* Primary Colors */
+  --primary-bg: #011627;
+  --primary-bg-dark: #011221;
+  --primary-dark: #01080e;
+
+  /* Secondary Colors */
+  --secondary-gray: #607b96;
+  --secondary-green: #3c9d93;
+  --secondary-blue: #4d5bce;
+  --secondary-white: #ffffff;
+
+  /* Accent Colors */
+  --accent-orange: #fea55f;
+  --accent-green: #43d9ad;
+  --accent-pink: #e99287;
+  --accent-purple: #c98bdf;
+
+  /* borders */
+  --border-gray: #1e2d3d;
+  --border-radius: 0.5rem;
+
+  /* Gradients Colors */
+  --gradient-blue: #4d5bce;
+  --gradient-green: #43d9ad;
+
+  /* Fonts */
+  --headline-text: 62px;
+  --subheadline-text: 32px;
+  --body-text: 16px;
+  --code-snippet-text: 14px;
+
+  /* Buttons */
+  --primary-button-bg: #fea55f;
+  --primary-button-color: #01080e;
+  --default-button-bg: #1c2b3a;
+  --default-button-color: #ffffff;
+  /* Buttons Hover */
+  --primary-button-bg-hover: #ffac6b;
+  --default-button-bg-hover: #263b50;
+  /* Buttons Padding */
+  --button-padding: 10px 14px;
+}
