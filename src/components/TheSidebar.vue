@@ -12,7 +12,6 @@ aside {
   border: 1px solid var(--border-gray);
   display: flex;
   justify-content: start;
-  align-items: center;
   flex-direction: column;
 }
 </style>
