@@ -1,12 +1,3 @@
-<script setup>
-import { ref, computed } from "vue";
-
-const enteredValue = ref("");
-const shouldDisplayPrepage = computed(() => {
-  return enteredValue.value !== "whois";
-});
-</script>
-
 <template>
   <div class="prepage" v-if="shouldDisplayPrepage">
     <div class="container">
@@ -19,13 +10,31 @@ const shouldDisplayPrepage = computed(() => {
             >></span
           >
           <div class="input-div">
-            <input title="complete" type="text" v-model="enteredValue" />
+            <input
+              autofocus
+              title="complete"
+              type="text"
+              v-model="enteredValue"
+              @blur="onBlur"
+            />
           </div>
         </div>
       </div>
     </div>
   </div>
 </template>
+
+<script setup>
+import { ref, computed } from "vue";
+
+const enteredValue = ref("");
+const shouldDisplayPrepage = computed(() => {
+  return enteredValue.value !== "whois";
+});
+function onBlur() {
+  document.activeElement.blur();
+}
+</script>
 
 <style scoped>
 .prepage {

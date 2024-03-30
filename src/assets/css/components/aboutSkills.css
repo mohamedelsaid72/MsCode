@@ -1,0 +1,35 @@
+.skills ol {
+  margin-left: 3rem;
+}
+.services {
+  position: relative;
+  height: 100%;
+}
+.services h4 {
+  margin-bottom: 1rem;
+}
+.services .services-code-block {
+  position: relative;
+  background-color: var(--primary-bg-dark);
+  padding: 2rem;
+  border-radius: 1rem;
+  border: 1px solid var(--border-gray);
+}
+
+.services .ref {
+  color: var(--accent-pink);
+}
+
+.services .description-content {
+  display: block;
+}
+@media (max-width: 450px) {
+  .skills ol li {
+    font-size: 14px;
+  }
+  .services .services-code-block {
+    font-size: 14px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+}

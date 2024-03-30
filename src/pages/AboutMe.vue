@@ -1,57 +1,47 @@
 <template>
   <div class="about-me">
     <SideBar>
-      <p>personal-info</p>
-      <ul>
-        <li>one</li>
-        <li>two</li>
-        <li>three</li>
-        <li>four</li>
-        <li>five</li>
+      <p class="highlight">personal-info</p>
+      <ul class="toggle-links">
+        <li
+          :class="{ active: selectedComponent === 'about-bio' }"
+          @click="setSelectedComponent('about-bio')"
+        >
+          <i class="ri-folder-3-fill"></i> bio
+        </li>
+        <li
+          :class="{ active: selectedComponent === 'about-skills' }"
+          @click="setSelectedComponent('about-skills')"
+        >
+          <i class="ri-folder-3-fill"></i> skills
+        </li>
       </ul>
+      <p class="highlight">contacts</p>
+      <div class="contact-links">
+        <p>
+          <a href="mailto:mohamedelsaid25737@gmail.com">
+            <i class="ri-mail-fill"></i> email-me</a
+          >
+        </p>
+        <p>
+          <a href="tel:01023214474"><i class="ri-phone-fill"></i> call-me</a>
+        </p>
+      </div>
     </SideBar>
-    <h2>About Me Component</h2>
+    <PageMain>
+      <transition name="fade" mode="out-in">
+        <component :is="selectedComponent"></component>
+      </transition>
+    </PageMain>
   </div>
 </template>
 
 <script setup>
-import { useGlobalStore } from "../stores/globalStore";
-import { computed } from "vue";
-import { useHead } from "@vueuse/head";
+import { ref } from "vue";
 
-const globalStore = useGlobalStore();
+const selectedComponent = ref("about-bio");
 
-const navbarHeight = computed(() => {
-  return globalStore.navbarHeight;
-});
-const footerHeight = computed(() => {
-  return globalStore.footerHeight;
-});
-
-useHead({
-  title: "Mohamed Elsayed | About",
-  meta: [
-    {
-      title: "description",
-      content: "About Me Page",
-    },
-  ],
-});
+function setSelectedComponent(cmp) {
+  selectedComponent.value = cmp;
+}
 </script>
-
-<style scoped>
-.about-me {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-.about-me aside {
-  position: relative;
-  height: 100%;
-  min-height: calc(100vh - v-bind(navbarHeight + footerHeight + 2 + "px"));
-}
-</style>

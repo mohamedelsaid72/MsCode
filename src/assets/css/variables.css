@@ -24,6 +24,9 @@
   --gradient-blue: #4d5bce;
   --gradient-green: #43d9ad;
 
+  /* icon colors */
+  --icon-blue: #86e1f9;
+
   /* Fonts */
   --headline-text: 62px;
   --subheadline-text: 32px;

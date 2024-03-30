@@ -1,0 +1,64 @@
+.project-card {
+  width: 370.35px;
+  height: 314.82px;
+  border-radius: 15px;
+  border: solid 1px var(--border-gray);
+}
+.project-title {
+  margin-bottom: 1rem;
+}
+.project-title .blue {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20.99px;
+  margin-right: 1rem;
+}
+
+.project-image {
+  position: relative;
+  width: 370.35px;
+  height: 145.44px;
+  border-radius: 15px 15px 0px 0px;
+  border-bottom: 1px solid var(--border-gray);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  border-radius: 15px 15px 0px 0px;
+  background-image: url("../../images/VueJSlogo.png");
+}
+.project-image .category-icon {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2px;
+  top: 1rem;
+  right: 1rem;
+  background-color: var(--icon-blue);
+}
+.project-image .category-icon svg path {
+  stroke: #011221;
+  fill: #011221;
+}
+.project-body {
+  height: 168px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.view-project {
+  width: 129px;
+  height: 38px;
+  color: var(--secondary-white);
+  padding: 10px 14px;
+  border-radius: 8px;
+  background-color: var(--border-gray);
+  font-size: 14px;
+  transition: all 0.3s ease-in-out;
+}
+.view-project:hover {
+  background-color: var(--default-button-bg-hover);
+}

@@ -3,15 +3,32 @@
     <slot></slot>
   </aside>
 </template>
+<script setup>
+import { useGlobalStore } from "@/stores/globalStore";
+import { computed } from "vue";
 
-<script setup></script>
+const globalStore = useGlobalStore();
+
+const SideBarWidth = computed(() => {
+  return globalStore.navbarBrandWidth;
+});
+</script>
+
 <style scoped>
 aside {
-  width: 221px;
+  position: relative;
   height: 100%;
-  border: 1px solid var(--border-gray);
-  display: flex;
-  justify-content: start;
-  flex-direction: column;
+  border-right: 1px solid var(--border-gray);
+  flex: 0 0 v-bind(SideBarWidth + "px");
+}
+@media screen and (max-width: 800px) {
+  aside {
+    border-bottom: 1px solid var(--border-gray);
+  }
+}
+@media screen and (max-width: 450px) {
+  aside {
+    flex: 0 0 108px;
+  }
 }
 </style>

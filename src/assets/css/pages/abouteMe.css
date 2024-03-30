@@ -1,0 +1,50 @@
+.about-me aside ul li {
+  color: var(--secondary-gray);
+  margin: 1rem 2rem;
+  cursor: pointer;
+  transition: ease-in-out 0.3s;
+}
+.about-me aside ul li.active,
+.about-me aside ul li:hover {
+  font-weight: 500;
+  color: var(--secondary-white);
+}
+.about-me aside ul li:last-child {
+  margin-bottom: 2rem;
+}
+
+.about-me aside ul li i:first-child {
+  color: var(--accent-pink);
+}
+
+.about-me aside ul li:nth-child(2) i {
+  color: var(--accent-green);
+}
+.about-me aside ul li:nth-child(3) i {
+  color: var(--secondary-blue);
+}
+
+@media screen and (max-width: 800px) {
+  .about-me {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 450px) {
+  .about-me aside .toggle-links,
+  .about-me aside .contact-links {
+    display: flex;
+  }
+  .about-me aside .toggle-links {
+    gap: 0 4rem;
+  }
+  .about-me aside .contact-links {
+    gap: 0 1rem;
+  }
+  .about-me aside ul li,
+  .about-me aside ul li:last-child {
+    margin: 0.5rem 1rem;
+  }
+  .about-me aside .contact-links p {
+    padding: 0.5rem 1rem;
+  }
+}

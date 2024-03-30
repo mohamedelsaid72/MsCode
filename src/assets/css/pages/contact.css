@@ -1,0 +1,126 @@
+.pre-header {
+  border-bottom: 1px solid var(--border-gray);
+}
+.pre-header .be-1px {
+  width: 200px;
+  border-inline-end: 1px solid var(--border-gray);
+  padding: 0.8rem 2rem;
+}
+form,
+.isContacted {
+  width: 410px;
+  margin: auto;
+  margin-top: 10%;
+  padding: 0 20px;
+}
+form .form-group {
+  display: flex;
+  flex-direction: column;
+}
+form .form-group input,
+form .form-group textarea {
+  all: unset;
+  padding: 0.4rem 1rem;
+  border: 2px solid var(--border-gray);
+  border-radius: 0.7rem;
+  margin-bottom: 10px;
+  background-color: var(--primary-bg-dark);
+  transition: all 0.1s ease-in-out;
+}
+form .form-group input:focus {
+  border: 2px solid var(--border-gray);
+}
+form .submit-btn,
+.isContacted button {
+  min-width: 146px;
+  text-align: center;
+  margin: 1rem 0;
+  background-color: var(--border-gray);
+  color: var(--secondary-white);
+  transition: all 0.3s ease-in-out;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+form button:hover,
+.isContacted button:hover {
+  background-color: var(--default-button-bg-hover);
+}
+
+.isContacted p.thank-you {
+  font-size: 26px;
+  font-weight: 450;
+  line-height: 34.11px;
+  text-align: center;
+  color: var(--secondary-white);
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+}
+.isContacted p.thanks-message {
+  font-size: 18px;
+  font-weight: 450;
+  line-height: 23.62px;
+  text-align: center;
+}
+
+.isContacted button {
+  display: block;
+  margin-top: 2rem !important;
+  margin: auto;
+}
+.code-snippet {
+  width: 75%;
+  margin: auto;
+}
+.code-snippet ol {
+  margin-top: 10%;
+  margin-inline-start: 2rem;
+}
+
+@media screen and (max-width: 450px) {
+  .code-snippet ol {
+    margin-top: 5%;
+    margin-inline-start: 0;
+  }
+}
+
+/* loader */
+
+.loader {
+  width: 24px;
+  height: 24px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+.loader::after,
+.loader::before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: var(--accent-green);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+.loader::before {
+  left: auto;
+  top: auto;
+  right: 0;
+  bottom: 0;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

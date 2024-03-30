@@ -1,0 +1,18 @@
+/* global */
+@import "../css/variables.css";
+@import "../css/global.css";
+
+/* components */
+@import "../css/components/pageMain.css";
+@import "../css/components/aboutBio.css";
+@import "../css/components/aboutSkills.css";
+@import "../css/components/pagesContainer.css";
+@import "../css/components/projectCard.css";
+@import "../css/components/theFooter.css";
+@import "../css/components/theNavbar.css";
+
+/* pages */
+@import "../css/pages/home.css";
+@import "../css/pages/abouteMe.css";
+@import "../css/pages/contact.css";
+@import "../css/pages/projects.css";

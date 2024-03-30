@@ -1,0 +1,135 @@
+/* import css & google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap");
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Fira Code", monospace;
+}
+body {
+  background-color: var(--primary-bg);
+  color: var(--secondary-white);
+}
+.container {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+button {
+  all: unset;
+  cursor: pointer;
+  padding: var(--button-padding);
+  border-radius: var(--border-radius);
+  font-size: 14px;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+/* classes */
+.about-me,
+.contact-me,
+.projects,
+.test {
+  position: relative;
+  width: 100%;
+  display: flex;
+}
+.headline-text {
+  font-size: var(--headline-text);
+}
+.subheadline-text {
+  font-size: var(--subheadline-text);
+}
+.code-snippet-text {
+  font-size: var(--code-snippet-text);
+}
+.blue {
+  color: var(--secondary-blue);
+}
+.green {
+  color: var(--secondary-green);
+}
+.orange {
+  color: var(--accent-orange);
+}
+.pink {
+  color: var(--accent-pink);
+}
+.purple {
+  color: var(--accent-purple);
+}
+.white {
+  color: var(--secondary-white);
+}
+.gray {
+  color: var(--secondary-gray);
+}
+.highlight {
+  font-size: var(--body-text);
+  font-weight: 500;
+  border-top: 1px solid var(--border-gray);
+  border-bottom: 1px solid var(--border-gray);
+  color: var(--secondary-white);
+  padding: 0.8rem 2rem;
+}
+.contact-links p {
+  padding: 0.8rem 2rem;
+}
+.contact-links p a {
+  color: var(--secondary-gray);
+  transition: ease-in-out 0.3s;
+}
+.contact-links p a:hover {
+  color: var(--secondary-white);
+}
+/* transition */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.4s ease;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+/* App Styles */
+
+@media screen and (max-width: 800px) {
+  .about-me,
+  .contact-me,
+  .projects {
+    flex-direction: column;
+  }
+}
+/* Media Queries */
+@media (max-width: 768px) {
+  .headline-text {
+    font-size: 2rem;
+  }
+  .subheadline-text {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (max-width: 450px) {
+  .about-me aside .highlight {
+    padding: 0.5rem 1rem;
+  }
+  .contact-links {
+    display: flex;
+  }
+  .contact-links {
+    gap: 0 1rem;
+  }
+  .contact-me .contact-links p:nth-child(1) {
+    padding: 0.8rem 0 0.8rem 1rem;
+  }
+  .contact-me .contact-links p:nth-child(2),
+  .contact-me .contact-links p:nth-child(3) {
+    padding: 0.8rem 0;
+  }
+}

@@ -12,10 +12,14 @@ export const useGlobalStore = defineStore("globalStore", () => {
   const totalHeight = computed(() => {
     return navbarHeight.value + footerHeight.value;
   });
+  const navbarBrandWidth = computed(() => {
+    return document.querySelector(".navbar-brand").offsetWidth;
+  });
 
   return {
     navbarHeight,
     footerHeight,
     totalHeight,
+    navbarBrandWidth,
   };
 });

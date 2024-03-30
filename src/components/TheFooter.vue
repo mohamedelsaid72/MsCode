@@ -34,30 +34,3 @@
     </div>
   </footer>
 </template>
-
-<style scoped>
-footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  border: 1px solid var(--border-gray);
-}
-footer .footer-first,
-footer .footer-last {
-  display: flex;
-  align-items: center;
-}
-footer p {
-  border-right: 1px solid var(--border-gray);
-  padding: var(--button-padding);
-  color: var(--secondary-white);
-}
-footer .footer-last p {
-  border-right: none;
-  border-left: 1px solid var(--border-gray);
-}
-footer p a {
-  color: var(--secondary-white);
-}
-</style>

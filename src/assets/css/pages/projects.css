@@ -1,0 +1,68 @@
+.projects .filters li {
+  color: var(--secondary-gray);
+  margin: 1rem 2rem;
+  transition: ease-in-out 0.3s;
+  display: flex;
+  align-items: center;
+}
+.projects .filters li input[type="checkbox"] {
+  width: 18.81px;
+  height: 18.81px;
+  gap: 0px;
+  border-radius: 2px 0px 0px 0px;
+  border: 1px 0px 0px 0px;
+  opacity: 0px;
+  margin-right: 0.5rem;
+  background: none !important;
+  cursor: pointer;
+}
+
+.projects .filters li svg {
+  margin-inline-end: 0.5rem;
+  cursor: pointer;
+}
+.projects .filters li input:checked + svg path {
+  stroke: white;
+}
+
+.projects .filters li input:checked + svg + label {
+  color: var(--secondary-white);
+}
+.projects .filters li label {
+  cursor: pointer;
+}
+
+.pre-header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid var(--border-gray);
+}
+.pre-header .category-box.highlight {
+  min-width: 200px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-inline-end: 1px solid var(--border-gray);
+  border-bottom: none;
+  padding: 0.8rem 2rem;
+}
+.pre-header .category-box .gap {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.pre-header .category-box.highlight svg {
+  margin-inline-start: 1rem;
+  cursor: pointer;
+}
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+  width: 80%;
+  margin: auto;
+  margin-top: 2rem;
+}

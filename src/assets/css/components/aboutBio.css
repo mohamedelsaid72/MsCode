@@ -1,0 +1,48 @@
+.about ol {
+  margin-left: 3rem;
+}
+.about ol li {
+  line-height: 2;
+}
+.about ol li:has(b) {
+  margin-top: 1rem;
+}
+
+.experience h4 {
+  margin-bottom: 2rem;
+}
+.experience .snippet {
+  background-color: var(--primary-bg-dark);
+  padding: 2rem;
+  border-radius: 1rem;
+  border: 1px solid var(--border-gray);
+}
+.experience .snippet > p {
+  margin-bottom: 1rem;
+}
+.experience .snippet .div-container {
+  margin-left: 1rem;
+}
+.experience .snippet .p-container {
+  margin-left: 1rem;
+}
+.experience .snippet .script-content {
+  margin-top: 2rem;
+}
+.experience .snippet .white {
+  margin: 1rem 0;
+  color: var(--secondary-white);
+}
+.experience .snippet .white .ref {
+  background-color: var(--primary-dark);
+}
+@media screen and (max-width: 450px) {
+  .about ol li {
+    font-size: 14px;
+  }
+  .experience .snippet {
+    font-size: 13px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+}
