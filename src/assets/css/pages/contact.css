@@ -1,3 +1,8 @@
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
 .pre-header {
   border-bottom: 1px solid var(--border-gray);
 }
@@ -8,7 +13,7 @@
 }
 form,
 .isContacted {
-  width: 410px;
+  max-width: 80%;
   margin: auto;
   margin-top: 10%;
   padding: 0 20px;
@@ -70,8 +75,9 @@ form button:hover,
   margin: auto;
 }
 .code-snippet {
-  width: 75%;
+  max-width: 80%;
   margin: auto;
+  padding: 0 20px;
 }
 .code-snippet ol {
   margin-top: 10%;
@@ -80,7 +86,7 @@ form button:hover,
 
 @media screen and (max-width: 450px) {
   .code-snippet ol {
-    margin-top: 5%;
+    margin: 5% 0;
     margin-inline-start: 0;
   }
 }
@@ -122,5 +128,36 @@ form button:hover,
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+/* responsive */
+@media (max-width: 1200px) {
+  form,
+  .isContacted {
+    margin-top: 0;
+  }
+  .code-snippet ol {
+    margin-top: 0;
+  }
+}
+@media (max-width: 800px) {
+  form,
+  .isContacted {
+    max-width: 90%;
+    margin-top: 0;
+  }
+  .code-snippet {
+    max-width: 90%;
+  }
+}
+@media (max-width: 450px) {
+  .contact-links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .code-snippet {
+    display: none;
   }
 }

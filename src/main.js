@@ -9,12 +9,12 @@ import "remixicon/fonts/remixicon.css";
 import "animate.css";
 
 // components
-import PrimaryBtn from "./ui/PrimaryBtn.vue";
-import DefaultBtn from "./ui/DefaultBtn.vue";
-import PrePage from "./pages/PrePage.vue";
-import SideBar from "./components/TheSidebar.vue";
-import PageMain from "./components/PageMain.vue";
-import PagesContainer from "./components/PagesContainer.vue";
+import PrimaryBtn from "@/ui/PrimaryBtn.vue";
+import DefaultBtn from "@/ui/DefaultBtn.vue";
+import PrePage from "@/pages/PrePage.vue";
+import SideBar from "@/components/TheSidebar.vue";
+import PageMain from "@/components/PageMain.vue";
+import PagesContainer from "@/components/PagesContainer.vue";
 
 import AboutBio from "@/components/AboutBio.vue";
 import AboutSkills from "@/components/AboutSkills.vue";

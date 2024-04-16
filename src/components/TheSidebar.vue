@@ -24,11 +24,12 @@ aside {
 @media screen and (max-width: 800px) {
   aside {
     border-bottom: 1px solid var(--border-gray);
+    flex: 0 0 50px;
   }
 }
 @media screen and (max-width: 450px) {
   aside {
-    flex: 0 0 108px;
+    flex: 0 0 50px;
   }
 }
 </style>

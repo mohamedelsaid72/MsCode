@@ -180,14 +180,25 @@ const enteredMessage = ref("");
 const isLoading = ref(false);
 const isContacted = ref(false);
 
-const storedContact = localStorage.getItem("contact");
+const storedContact = localStorage.getItem("contactInfo");
 if (storedContact) {
   isContacted.value = true;
+  enteredName.value = JSON.parse(storedContact).name;
+  enteredEmail.value = JSON.parse(storedContact).subject;
+  enteredMessage.value = JSON.parse(storedContact).message;
 }
 
 const submitForm = async () => {
   isLoading.value = true;
   try {
+    const requestBody = {
+      subject: enteredEmail.value,
+      message: enteredMessage.value,
+      name: enteredName.value,
+    };
+
+    localStorage.setItem("contactInfo", JSON.stringify(requestBody));
+
     await fetch("https://sendmail-api-docs.vercel.app/api/send", {
       method: "POST",
       body: JSON.stringify({
@@ -203,7 +214,6 @@ const submitForm = async () => {
     enteredEmail.value = "";
     enteredMessage.value = "";
 
-    localStorage.setItem("contact", true);
     isContacted.value = true;
     isLoading.value = false;
   } catch (error) {
@@ -213,7 +223,7 @@ const submitForm = async () => {
 };
 
 const clearLocalStorage = () => {
-  localStorage.removeItem("contact");
+  localStorage.removeItem("contactInfo");
   isContacted.value = false;
 };
 </script>
